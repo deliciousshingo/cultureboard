@@ -1,10 +1,11 @@
 .contents {
   background-color: white;
+  position: relative;
 }
 
 .first-view{
   height: 60vh;
-}
+} 
 
 .top-image{
   height: 100%;
