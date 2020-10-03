@@ -4,9 +4,28 @@
     <img src="assets/Culture.jpeg" alt="トップ画面" class="top-image" >
   </div>
   <div class="board-wrap">
-    <div class="board-text">
+    <div class="board-index-text">
       <h2>【Culture一覧】</h2>
     </div>
+  </div>
+
+  <div class="board-contents">
+    <ul class="board-lists">
+      <% @boards.each do |board| %>
+      <li class="list">
+        <%= link_to boards_path(board.id) do %>
+          <div class='board-img-content'>
+              <%= image_tag board.image, class: "board-img" if board.image.attached? %>
+          </div>
+          <div class='board-info'>
+            <p class='board-name'>
+              <%= board.title %>
+            </p>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
   </div>
 
    <div class='board-btn'>

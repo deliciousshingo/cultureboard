@@ -15,16 +15,54 @@
 .board-wrap {
  text-align: center;
  font-size: 20px;
- height: 100vh;
+ /* height: 100vh; */
 }
 
-.board-text {
-  padding: 15px;
+.board-index-text {
+  padding: 10px;
+}
+
+.board-contents {
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 0;
+}
+
+.board-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.board-lists>.list {
+  width: 50vh;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.board-img-content {
+  position: relative;
+  left: 10%;
+}
+
+.board-img {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 5px;
+}
+
+.board-name {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
 }
 
 .board-btn {
   width: 120px;
-  background: #C299FF;
+  background: #75A9FF;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -35,10 +73,14 @@
 }
 
 .board-btn-text {
-  color: #FFFF00;
+  color: #fff;
   font-weight: bold;
   display: block;
   font-size: 20px;
   text-decoration: none;
   margin-bottom: 5px;
+}
+
+li {
+  list-style: none;
 }
