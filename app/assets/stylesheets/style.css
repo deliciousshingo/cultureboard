@@ -2,9 +2,12 @@ body {
   font-size: 14px;
   color: #333;
   margin: 0 auto;
+  background-color: #EEEEEE	;
+  min-height: 103vh;
+  position: relative;
 }
 h1,h2,h3,h4,h5,h6,p {
-  padding: 10px 0;
+  padding: 5px 0;
   margin: 0;
 }
 
@@ -18,35 +21,33 @@ a {
   color: #FF773E;
 }
 
+
 header {
   height: 50px;
   background-color: #0000CC;
   padding: 10px 0;
   display: flex;
-  position: relative;
-  
 }
 
 .heading {
-  width: 80%;
+  width: 82%;
   margin-left: 30px;
 }
 
 
 .user_nav {
-  width: 20%;
-  padding: 20px;
+  width: 18%;
   display: flex;
 }
 
 .user_info {
   font-weight: bold;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
+  font-size: 18px;
+  list-style: none;
+  padding-top: 10px;
 }
+
+
 
 footer {
   font-weight: bold;
