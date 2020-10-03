@@ -1,5 +1,5 @@
 .contents {
-  background-color: white;
+  background-color: #EEEEEE;
   position: relative;
 }
 
@@ -12,8 +12,33 @@
   width: 100%;
 }
 
-.boards-wrap {
+.board-wrap {
  text-align: center;
  font-size: 20px;
+ height: 100vh;
 }
 
+.board-text {
+  padding: 15px;
+}
+
+.board-btn {
+  width: 120px;
+  background: #C299FF;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  z-index:2;
+}
+
+.board-btn-text {
+  color: #FFFF00;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}

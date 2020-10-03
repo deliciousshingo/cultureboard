@@ -3,10 +3,16 @@
   <div class="first-view">
     <img src="assets/Culture.jpeg" alt="トップ画面" class="top-image" >
   </div>
-  <div class="boards-wrap">
-    <div class="boards-text">
+  <div class="board-wrap">
+    <div class="board-text">
       <h2>【Culture一覧】</h2>
     </div>
   </div>
+
+   <div class='board-btn'>
+      <%= link_to new_board_path do %>
+      <span class= "board-btn-text">投稿</span>
+      <% end %>
+    </div>
 </div>
 <%= render "layouts/shared/footer" %>
