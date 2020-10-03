@@ -1,0 +1,115 @@
+.board-post-contents {
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+}
+
+.board-post-main {  
+  width: 70vw;
+  height: 138vh;
+  padding: 5vh 15vw;
+}
+
+.board-post-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 共通 */
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+/* 出品画像 */
+.img-upload {
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+/* /出品画像 */
+
+.board-text {
+  width: 50%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.board-information {
+  margin-top: 2vh;
+}
+
+/* 商品の詳細など */
+.board-detail {
+  padding: 2vh 0;
+}
+
+.boards-detail>.form {
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+/* /商品の詳細など */
+
+/* 下部ボタン */
+.post-btn-contents {
+  width: 30%;
+  text-align: center;
+  position: absolute;
+  right: 35%;
+}
+
+.post-btn {
+  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  border: 1px #a88734 solid;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  border-radius: 3px;
+}
+
+.post-btn:hover {
+  cursor: pointer;
+  background: #f0c14b;
+}
+
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
