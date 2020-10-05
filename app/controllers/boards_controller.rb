@@ -1,5 +1,4 @@
 class BoardsController < ApplicationController
-
   def index
     @boards = Board.all
   end
@@ -26,5 +25,4 @@ class BoardsController < ApplicationController
   def board_params
     params.require(:board).permit(:title, :information, :genre_id, :image).merge(user_id: current_user.id)
   end
-
 end

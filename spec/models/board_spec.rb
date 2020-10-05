@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Board, type: :model do
-
   describe '投稿機能の登録' do
     before do
       @board = FactoryBot.build(:board)
@@ -37,4 +36,3 @@ RSpec.describe Board, type: :model do
     end
   end
 end
-
