@@ -2,56 +2,15 @@
 <div class="board-post-contents">
   <div class="board-post-main">
     <h2 class="board-post-title">投稿内容を入力</h2>
-    <%= form_with model: @board, url: boards_path(@board.id), local: true do |f| %>
-    
-    <%= render 'layouts/shared/error_messages', model: f.object %>
-      
-        <%# <%= render partial: "form", locals: { f: f} %> %>
-
-        
-      <div class="img-upload">
-        <div class="weight-bold-text">
-          投稿画像
-          <span class="indispensable">必須</span>
-        </div>
-        <div class="click-upload">
-          <p>
-            クリックしてファイルをアップロード
-          </p>
-          <%= f.file_field :image, id:"post-image" %>
-        </div>
-      </div>
-      
-      <div class="new-post">
-        <div class="weight-bold-text">
-          タイトル
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :title, class:"board-text", id:"title-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
-        <div class="board-information">
-          <div class="weight-bold-text">
-            投稿内容の説明
-            <span class="indispensable">必須</span>
-          </div>
-          <%= f.text_area :information, class:"board-text", id:"board-info", placeholder:"投稿内容の説明（必須 1,000文字まで）zoom idやpass、開始時間、投稿の内容などをご記入してくだい" ,rows:"7" ,maxlength:"1000" %>
-        </div>
-      </div>
-      
-      <div class="board-detail">
-        <div class="weight-bold-text">投稿の詳細</div>
-        <div class="form">
-          <div class="weight-bold-text">
-            投稿ジャンル
-            <span class="indispensable">必須</span>
-          </div>
-          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"board-genre"}) %>
-      </div>
-     
+      <%= form_with model: @board, url: boards_path(@board.id), local: true do |f| %>
+      <%= render 'layouts/shared/error_messages', model: f.object %>
+      <%= render partial: "form", locals: { f: f} %>
   </div>
+  
   <div class="post-btn-contents">
-        <%= f.submit "投稿する" , class:"post-btn" %>
-        <%=link_to 'もどる', root_path, class:"back-btn" %>
-      </div>
-    <% end %>
+    <%= f.submit "投稿する" , class:"post-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+      <% end %>
 </div>
 <%= render "layouts/shared/footer" %>

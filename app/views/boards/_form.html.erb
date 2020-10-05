@@ -1,0 +1,37 @@
+<div class="img-upload">
+        <div class="weight-bold-text">
+          投稿画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"post-image" %>
+        </div>
+      </div>
+      
+      <div class="new-post">
+        <div class="weight-bold-text">
+          タイトル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :title, class:"board-text", id:"title-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+        <div class="board-information">
+          <div class="weight-bold-text">
+            投稿内容の説明
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :information, class:"board-text", id:"board-info", placeholder:"投稿内容の説明（必須 1,000文字まで）zoom idやpass、開始時間、投稿の内容などをご記入してくだい" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+      </div>
+      
+      <div class="board-detail">
+        <div class="weight-bold-text">投稿の詳細</div>
+        <div class="form">
+          <div class="weight-bold-text">
+            投稿ジャンル
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"board-genre"}) %>
+      </div>
