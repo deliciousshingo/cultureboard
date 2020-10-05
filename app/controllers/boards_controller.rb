@@ -1,4 +1,7 @@
 class BoardsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_board, only: [:show, :edit, :update, :destroy]
+
   def index
     @boards = Board.all
   end
@@ -17,16 +20,21 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Board.find(params[:id])
   end
 
   def edit
-    @board = Board.find(params[:id])
   end
 
   def update
-    @board = Board.find(params[:id])
     if @board.update(board_params)
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @board.destroy
       redirect_to root_path
     else
       render 'edit'
@@ -37,5 +45,9 @@ class BoardsController < ApplicationController
 
   def board_params
     params.require(:board).permit(:title, :information, :genre_id, :image).merge(user_id: current_user.id)
+  end
+
+  def set_board
+    @board = Board.find(params[:id])
   end
 end
