@@ -1,0 +1,16 @@
+<%= render "layouts/shared/header" %>
+<div class="board-post-contents">
+  <div class="board-post-main">
+    <h2 class="board-post-title">投稿内容を入力</h2>
+      <%= form_with model: @board, url: board_path(@board.id), local: true do |f| %>
+      <%= render 'layouts/shared/error_messages', model: f.object %>
+      <%= render partial: "form", locals: { f: f} %>
+  </div>
+
+  <div class="post-btn-contents">
+    <%= f.submit "変更する" , class:"post-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+      <% end %>
+</div>
+<%= render "layouts/shared/footer" %>
