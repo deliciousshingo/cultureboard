@@ -1,0 +1,61 @@
+<%= render "layouts/shared/header" %>
+<div class="board-show-contents">
+  <div class="board-show-box">
+    <div class='board-show-img'>
+      <%= image_tag @board.image, class: "board-show-img"  %>
+    </div>
+    <div class="edit-delete-btn">
+      <div class="board-show-edit">
+        <%= link_to "編集", "#", class: "edit-btn" %>
+      </div>
+      <div class="board-show-delete">
+        <%= link_to "削除", "#", class: "delete-btn", method: :delete %>
+      </div>
+    </div>
+
+     <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-board">タイトル</th>
+          <td class="detail-value"><%= @board.title %></td>
+        </tr>
+        <tr>
+          <th class="detail-board">ジャンル</th>
+          <td class="detail-value"><%= @board.genre.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="large-detail-table">
+      <tbody>
+         <tr>
+          <th class="detail-board-content">内容</th>
+          <td class="detail-value-information"><%= @board.information %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="comments-box">
+      <% if current_user %>
+        <%# <% form_with (model: [@board, @comment], local: true) do |f| %> %>
+          <%# <%= f.text_area :text, placeholder: "コメントする" %> %>
+          <%# <% f.submit "送信"%>  %>
+        <%# <% end %> %>
+      <%# <% else %> %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+        <div class="comments">
+          <h4>コメント一覧</h4>
+          <%# <% if @comments %> %>
+            <%# <% @comments.each do |comment|%> %>
+              <p>
+                <%# <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>:</strong>
+                <%# <%= comment.text %> %> %>
+              </p>
+            <%# <% end %>   %>
+          <%# <% end %>   %>
+        </div>
+    </div>
+</div>
+
+
+<%= render "layouts/shared/footer" %>
