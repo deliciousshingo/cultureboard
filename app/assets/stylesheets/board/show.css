@@ -25,7 +25,7 @@
 .edit-delete-btn {
   font-size: 18px;
   display: flex;
-  margin-bottom: 60px;
+  margin: 35px;
 }
 .board-show-edit {
   font-weight: bold;
@@ -45,7 +45,7 @@
 }
 
 .detail-table {
-  margin-bottom: 10px;
+  margin-top: 40px;
   width: 70%;
   height: 100%;
 }
@@ -67,7 +67,7 @@
 }
 
 .large-detail-table {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 70%;
   height: 150px;
 }
@@ -91,6 +91,6 @@
 }
 
 .comments-box {
-  padding: 3vh 0;
+  padding: 2vh 0;
   margin-bottom: 10vh;
 }
