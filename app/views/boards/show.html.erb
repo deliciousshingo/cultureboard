@@ -4,7 +4,7 @@
     <div class='board-show-img'>
       <%= image_tag @board.image, class: "board-show-img"  %>
     </div>
-    <% if current_user == @board.user.id %>
+    <% if user_signed_in? && current_user.id == @board.user_id %>
     <div class="edit-delete-btn">
       <div class="board-show-edit">
         <%= link_to "編集", edit_board_path(@board.id), class: "edit-btn" %>
