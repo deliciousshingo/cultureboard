@@ -1,0 +1,96 @@
+.board-show-contents {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.board-show-box {
+  width: 70vw;
+  padding: 5vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-show-img {
+  height: 50vh;
+  width: 50vw;
+  min-height: 500px;
+  object-fit: contain;
+}
+
+.edit-delete-btn {
+  font-size: 18px;
+  display: flex;
+  margin-bottom: 60px;
+}
+.board-show-edit {
+  font-weight: bold;
+  background-color: #0000CC;
+  border: 1px solid #0000CC;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin-right: 60px;
+}
+
+.board-show-delete {
+  font-weight: bold;
+  background-color: #0000CC;
+  border: 1px solid #0000CC;
+  border-radius: 5px;
+  padding: 10px 50px;
+}
+
+.detail-table {
+  margin-bottom: 10px;
+  width: 70%;
+  height: 100%;
+}
+
+.detail-board {
+  width: 10%;
+  color: #FF773E;
+  background-color: #0000CC;
+  border: 1px solid #0000CC;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.large-detail-table {
+  margin-bottom: 10px;
+  width: 70%;
+  height: 150px;
+}
+
+.detail-board-content {
+  width: 10%;
+  height: 50%;
+  color: #FF773E;
+  background-color: #0000CC;
+  border: 1px solid #0000CC;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-value-information {
+  width: 30%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.comments-box {
+  padding: 3vh 0;
+  margin-bottom: 10vh;
+}

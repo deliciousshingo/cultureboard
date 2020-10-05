@@ -13,9 +13,9 @@
     <ul class="board-lists">
       <% @boards.each do |board| %>
       <li class="list">
-        <%= link_to boards_path(board.id) do %>
+        <%= link_to board_path(board.id) do %>
           <div class='board-img-content'>
-              <%= image_tag board.image, class: "board-img" if board.image.attached? %>
+              <%= image_tag board.image, class: "board-index-img" %>
           </div>
           <div class='board-info'>
             <p class='board-name'>
