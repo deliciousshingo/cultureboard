@@ -40,27 +40,31 @@
       </tbody>
     </table>
   </div>
-    <div class="comments-box">
+  <div class="comment-wrap">
+    <div class="comment-box">
       <% if current_user %>
-        <%# <% form_with (model: [@board, @comment], local: true) do |f| %> %>
-          <%# <%= f.text_area :text, placeholder: "コメントする" %> %>
-          <%# <% f.submit "送信"%>  %>
-        <%# <% end %> %>
-      <%# <% else %> %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <%= form_with model: [@board, @comment], local: true do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする" %>
+          <%= form.submit "送信"%> 
+        <% end %>
+      <% else %>
+      <div class="comment-caution-text">
+      <strong><p>~~~ コメントの投稿には新規登録/ログインが必要です ~~~</p></strong>
+      </div>
       <% end %>
         <div class="comments">
-          <h4>コメント一覧</h4>
-          <%# <% if @comments %> %>
-            <%# <% @comments.each do |comment|%> %>
+          <h4>＜コメント一覧＞</h4>
+          <% if @comments %>
+            <% @comments.each do |comment|%>
               <p>
-                <%# <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>:</strong>
-                <%# <%= comment.text %> %> %>
+                <strong><%= link_to comment.user.name, "/users/#{comment.user_id}"%>:</strong>
+                <%= comment.text %>
               </p>
-            <%# <% end %>   %>
-          <%# <% end %>   %>
+            <% end %>  
+          <% end %>  
         </div>
     </div>
+  </div>
 </div>
 
 
