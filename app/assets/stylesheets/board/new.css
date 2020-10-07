@@ -6,7 +6,7 @@
 
 .board-post-main {  
   width: 70vw;
-  height: 138vh;
+  height: 120vh;
   padding: 5vh 15vw;
 }
 
@@ -16,7 +16,6 @@
   text-align: center;
 }
 
-/* 共通 */
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -38,7 +37,6 @@
   padding-left: 20px;
 }
 
-/* 出品画像 */
 .img-upload {
   flex-wrap: wrap;
   padding: 2vh 0;
@@ -52,7 +50,6 @@
   margin-bottom: 15px;
 }
 
-/* /出品画像 */
 
 .board-text {
   width: 50%;
@@ -67,7 +64,7 @@
   margin-top: 2vh;
 }
 
-/* 商品の詳細など */
+
 .board-detail {
   padding: 2vh 0;
 }
@@ -80,9 +77,6 @@
   margin: 2vh 0;
 }
 
-/* /商品の詳細など */
-
-/* 下部ボタン */
 .post-btn-contents {
   width: 30%;
   text-align: center;
@@ -91,8 +85,9 @@
 }
 
 .post-btn {
-  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-  border: 1px #a88734 solid;
+  color: #FF773E;
+  background: #0000CC;
+  border: 1px #0000CC solid;
   width: 100%;
   height: 50px;
   font-size: 14px;
@@ -102,7 +97,7 @@
 
 .post-btn:hover {
   cursor: pointer;
-  background: #f0c14b;
+  opacity: 0.8;
 }
 
 
