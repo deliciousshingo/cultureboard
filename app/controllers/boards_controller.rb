@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @boards = Board.all
+    @boards = Board.order("created_at DESC")
   end
 
   def new
