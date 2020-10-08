@@ -1,6 +1,6 @@
 # README
 
-# アプリ名(h1)  
+# アプリ名  
 CultureBoard  
 
 
