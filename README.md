@@ -36,16 +36,17 @@ Zoom専用掲示板
 時間があるからこそ何か新しいことを挑戦したり、知識やスキルを得る人へのプラットフォームを作りたかった。  
 これからの時代は複数の仕事を持つ時代と考えました。そこからこの掲示板を使ってフォローワーを増やして何か副業の役に立てればいいなと思いました。  
 
-# DEMO. 
+# DEMO
 
 ![DEMO](Cultureboard.png)
 
 
-# 実装予定の機能  
-Amazon S3  
-AWS  
-いいね機能  
-SNS認証  
+# 実装予定の機能と実装理由  
+マイページ　プロフィールや自身が投稿した内容を確認するため  
+Amazon S3  投稿した画像が表示され続けるように  
+AWS  世界中のユーザーにこのアプリを使ってもらうために  
+いいね機能  ユーザーの投稿やユーザー自身の信頼度や価値を高めるため
+SNS認証  ユーザー登録を簡易にするため
 
 
 # データベース設計  
@@ -59,7 +60,7 @@ SNS認証
 
 ### Association
 
-- has_many :boars
+- has_many :boards
 - has_many :comments
 
 ## boards テーブル
@@ -81,7 +82,7 @@ SNS認証
 | ------ | ---------- | ------------------------------ |
 | text | text | null: false|
 | user_id   | integer | null: false, foreign_key: true |
-| item_id  | integer | null: false, foreign_key: true |
+| _id  | integer | null: false, foreign_key: true |
 
 ### Association
 
