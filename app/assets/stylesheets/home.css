@@ -39,7 +39,7 @@
 .board-lists>.list {
   width: 50vh;
   padding: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .board-img-content {
@@ -61,10 +61,10 @@
 
 .board-btn {
   width: 120px;
-  background: #75A9FF;
+  background: #0000CC;
   text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
+  border-radius: 5px;
+  bottom: 90px;
   right: 32px;
   position: fixed;
   padding: 15px;
@@ -72,7 +72,7 @@
 }
 
 .board-btn-text {
-  color: #fff;
+  color: #FF773E;
   font-weight: bold;
   display: block;
   font-size: 20px;
@@ -81,5 +81,5 @@
 }
 
 li {
-  list-style: none;
+  list-style: none; 
 }

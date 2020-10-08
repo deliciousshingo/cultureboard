@@ -1,9 +1,10 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @boards = Board.all
+    @boards = Board.order("created_at DESC")
   end
 
   def new
@@ -43,6 +44,10 @@ class BoardsController < ApplicationController
     end
   end
 
+  def search
+    @boards = Board.search(params[:keyword])
+  end
+
   private
 
   def board_params
@@ -51,5 +56,11 @@ class BoardsController < ApplicationController
 
   def set_board
     @board = Board.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end

@@ -43,28 +43,29 @@
   <div class="comment-wrap">
     <div class="comment-box">
       <% if current_user %>
-        <%= form_with model: [@board, @comment], local: true do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする" %>
-          <%= form.submit "送信"%> 
+        <%= form_with model: [@board, @comment], local: true, class: "comment-form" do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", class: "comment-input" %>
+          <%= form.submit "送信", class: "comment-btn" %> 
         <% end %>
       <% else %>
       <div class="comment-caution-text">
       <strong><p>~~~ コメントの投稿には新規登録/ログインが必要です ~~~</p></strong>
       </div>
       <% end %>
-        <div class="comments">
-          <h4>＜コメント一覧＞</h4>
-          <% if @comments %>
-            <% @comments.each do |comment|%>
-              <p>
-                <strong><%= link_to comment.user.name, "/users/#{comment.user_id}"%>:</strong>
-                <%= comment.text %>
-              </p>
-            <% end %>  
-          <% end %>  
-        </div>
+    </div>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment|%>
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}"%>:</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>  
+      <% end %>  
     </div>
   </div>
+    <%=link_to 'もどる', root_path, class:"show-back-btn" %>
 </div>
 
 
