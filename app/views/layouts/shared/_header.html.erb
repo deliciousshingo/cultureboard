@@ -6,7 +6,7 @@
   <% if user_signed_in? %>
     <div class="user_nav">
       <div class="user_info">
-      <%= link_to current_user.name, class: "post" %> /    
+      <%= link_to current_user.name,"/users/#{current_user.id}", class: "post" %> /    
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </div>
   <% else %>
