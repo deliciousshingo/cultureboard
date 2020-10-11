@@ -1,0 +1,21 @@
+<%= render "layouts/shared/header" %>
+<div class="profile-wrap">
+  <div class="profile-left">
+    <div class="profile-lists">  
+      <ul class="profile-list">
+        <li><%= link_to "プロフィールの編集", "#", class: "profile-edit"%></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="profile-right">
+    <P class="profile-text">【投稿一覧】</P>
+    <div class="posted-lists">
+    <% @boards.each do |board| %>
+      <%= render partial: "boards/list", locals: { board: board } %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "layouts/shared/footer" %>
