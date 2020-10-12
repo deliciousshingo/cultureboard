@@ -5,28 +5,7 @@
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
      <%= render 'devise/shared/error_messages', resource: resource %>
 
-      <div class="box-name">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true %>
-      </div>
-
-      <div class="box-email">
-        <%= f.label :email %><br />
-        <%= f.email_field :email %>
-      </div>
-
-      <div class="box-password">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <div class="box-password-confirmation">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+       <%= render partial: 'users/form', locals: { f: f } %>
 
       <div class="action">
         <%= f.submit "新規登録" %>
