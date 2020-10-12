@@ -9,7 +9,7 @@
 
   <div class="post-btn-contents">
     <%= f.submit "変更する" , class:"post-btn" %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <%=link_to 'もどる', board_path(@board.id), class:"back-btn" %>
   </div>
       <% end %>
 </div>
