@@ -10,7 +10,7 @@
         <%= link_to "編集", edit_board_path(@board.id), class: "edit-btn" %>
       </div>
       <div class="board-show-delete">
-        <%= link_to "削除", "#", class: "delete-btn", method: :delete %>
+        <%= link_to "削除", board_path, class: "delete-btn", method: :delete %>
       </div>
     </div>
     <%end%>
