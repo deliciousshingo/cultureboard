@@ -1,12 +1,16 @@
-  <li class="list">
-    <%= link_to board_path(board.id) do %>
-      <div class='board-img-content'>
-          <%= image_tag board.image, class: "board-index-img" %>
-      </div>
-      <div class='board-info'>
-        <p class='board-name'>
-          <%= board.title %>
-        </p>
-      </div>
-    <% end %>
-  </li>
+<li class="list">
+  <%= link_to board_path(board.id) do %>
+    <div class='board-img-content'>
+        <%= image_tag board.image, class: "board-index-img" %>
+    </div>
+    <div class='board-info'>
+      <p class='board-name'>
+        <%= board.title %>
+      </p>
+    </div>
+
+    <div id="like-<%= board.id %>">
+    <%= render 'likes/like', { board: board }%>
+    </div>
+  <% end %>
+</li>
