@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+    <%if Like.find_by(user_id: current_user.id, board_id: board.id) %>
+      <%= link_to board_like_path(board, board.likes), {method: "delete", remote: true, class: "likes-count"} do %>
+      <i class="far fa-heart"></i>
+      <%= board.likes.count %>
+      <% end %>
+    <% else %>
+
+      <%= link_to board_likes_path(board), {method: "post", remote: true, class: "likes-count"} do %>
+      <i class="far fa-heart"></i>
+      <%= board.likes.count %>
+      <% end %>
+    <% end %>
+  <% else %>
+  <i class="likes-number">♡</i>
+    <i class="likes-count"><%= board.likes.count %></i>
+<% end %>
