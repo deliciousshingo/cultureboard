@@ -1,5 +1,6 @@
 .profile-wrap {
   display: flex;
+  height: 85vh;
 }
 
 .profile-left {
