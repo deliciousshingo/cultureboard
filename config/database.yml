@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: cultureboard_production
-  username: cultureboard
-  password: <%= ENV['CULTUREBOARD_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
