@@ -3,15 +3,6 @@
   position: relative;
 }
 
-.first-view{
-  height: 60vh;
-} 
-
-.top-image{
-  height: 100%;
-  width: 100%;
-}
-
 .board-wrap {
  text-align: center;
  font-size: 20px;
